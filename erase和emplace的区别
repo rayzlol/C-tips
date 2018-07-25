@@ -1,0 +1,13 @@
+遍历一个容器，用emplace删除就不出错，为什么？
+for (auto i : s) {
+		if (A[i] < 2) {
+			s.emplace(i);
+		}
+}
+
+遍历一个容器，用erase删除就出错，
+for (auto i : s) {
+		if (A[i] < 2) {
+			s.erase(i);
+		}
+}

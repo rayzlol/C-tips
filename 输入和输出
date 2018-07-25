@@ -8,3 +8,11 @@ cin.getchar()
 cin.getline()
 getchar()
 getline()
+
+
+1.cin输入同类元素，空格回车都可以隔开
+2.cin输入不同元素,比如1/3 1.5
+int a,b;char c;
+cin>>a>>c>>b
+
+3.cin  接getchar（）读出回车符，再接getline(cin,s);

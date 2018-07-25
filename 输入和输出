@@ -1,4 +1,9 @@
 cin
+不区分空格和回车
+
+
+
+
 cin.getchar()
 cin.getline()
 getchar()

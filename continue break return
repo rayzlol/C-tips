@@ -1,0 +1,27 @@
+continue例子：
+    for(int i = 0; i < k; i++) {
+        int id;
+        cin>>id;
+        if(ran[id] == 0) {
+            printf("Are you kidding?\n");
+            continue;
+        }
+        if(ss.find(id) == ss.end()) {
+            ss.insert(id);
+        } else {
+            printf("Checked\n");
+            continue;
+        }
+        if(ran[id] == 1) {
+            printf("Mystery Award\n");
+        }else if(isprime(ran[id])) {
+            printf("Minion\n");
+        }else {
+            printf("Chocolate\n");
+        }
+    }
+在一个块中，continue结束上一部分，开始下一轮
+
+break就结束整个循环
+
+return直接结束程序

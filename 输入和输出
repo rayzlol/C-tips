@@ -1,5 +1,78 @@
-cin
-不区分空格和回车
+scanf()有返回值，表示成功读入的变量个数   printf(“%d”,scanf("%d%d",&m,&n);
+scanf()值为EOF（-1）说明输入数据已结束   while(scanf("%d%d",&n,&m)!=EOF)   while(scanf("%d%d",&n,&m)==2)
+scanf()读入不同类型变量，输入字符时不会跳过空格，空格也被当做字符读入，输入其他类型数据时，会跳过空格
+scanf()跳过输入中的字符   scanf("%d %c,%f:%d",&n,&c,&f,&m)  12 k 3.75:290
+
+freopen重定向输入,测试数据存入文件，freopen输入由键盘重定向为文件，运行程序时不需要输入数据了
+freopen("c:\\tmp\\test.txt","r",stdin); //以后所有输入都来自文件c:\tmp\test.txt,之后程序还是照常写
+
+printf()输出
+%x  以十六进制读入或输出
+%lld  读入或输出long long变量
+%nd   以n字符宽度输出整数，不足时用空格填充（%4d %12d）
+%0nd  以n字符宽度输出整数，不足时用0填充（%04d %012d）
+%.nf  输出浮点数，精确到小数点后n位   (%.4f %3f)
+
+cin 忽略空格回车，回车后读取缓冲区内容返回值bool。跳过空格和回车 cin>>int>>char>>int   3k3  1/5  -1/5
+cin.get()函数读入所有输入的字符，包括空格，回车。用于读入一个字符。cin.get()返回值是int类型，是读取的字符的ASCII码
+cin.get()不能用char类型来存，不然没法区分!EOF
+2种形式：无参数，一个参数。是cin对象的一个方法，cin里面的一个函数
+把字符回车都读取打印出来了，不会跳过空格和回车。
+cin.get()   cin.get(char);
+int main() {
+	char c;
+	while ((c=cin.get())!=EOF)
+		cout << c;
+}
+带参数的:就像cin一样 也返回Bool
+int main() {
+	char c;
+	while (cin.get(c))
+		cout << c;
+}
+cin.get()比cin强大一些，可以读出空格回车，但除了特殊字符EOF
+getchar()函数更吊了，连EOF都能读出来.是输入输出库里的一个函数，不跳过任何字符
+int main() {
+	char c;
+	while (c=getchar())
+		cout << c;
+}
+有3个参数的get函数读取字符串cin.get()函数
+cin.get(ch,10,'\n')
+读取10-1个字符（包含空格）赋给指定的字符数组；如果在读取10-1个字符之前，遇到指定的终止字符‘\n’
+则提前结束读取；如果第三个参数没有指定，则默认为'\n'    读取成功返回非0值（真），如失败（遇文件结束符）
+则返回0（假）
+	char ch[20];
+	cin.get(ch, 10, 'o');
+	cout << ch << endl;
+  
+
+读取一串字符还可以用cin.getline() 基本用法类似cin.get()
+int main() {
+	char ch[20];
+	cin.getline(ch, 10, 'o');
+	cout << ch << endl;
+}
+
+getline和get的区别
+getline遇到终止标志字符时结束，缓冲区指针移动到终止标志字符之后
+get遇到终止字符时停止读取，指针不移动
+cin.get()   we are g|ood friends
+cin.getline() we are go|od friends
+缓冲区指针停下的位置不一样，输出一样
+cin.getline()的方式更符合自算计思维方式，更常用的输入方式，因为大部分时候终止字符设置成换行，cin.getline()自动换到下一行
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8,6 +81,11 @@ cin.getchar()
 cin.getline()
 getchar()
 getline()
+
+
+scanf()读入所有字符包括空格回车：char c;while(scanf("%c",&c)!=EOF){printf("%c",c);}
+
+输入缓冲区：
 
 
 1.cin输入同类元素，空格回车都可以隔开

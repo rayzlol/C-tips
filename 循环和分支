@@ -1,24 +1,10 @@
-for循环按照次数执行代码
-while按某种条件执行
-//do while比较少见
+for按照次数执行
+while按条件执行，涉及到条件/无限循环适用while
+
+do while比较少见         PAT甲级1069是个例子https://www.liuchuo.net/archives/2468
 do{
     语句组
 } while(表达式);
-//每执行一次循环后，都要判断
-输出1到10000内所有2的整数次幂：
-int n=1;
-do{
-    cout<<n<<endl;
-    n*=2;
-} while(n<10000);
-
-
-
-
-
-
-
-//PAT1069           https://www.liuchuo.net/archives/2468 
 #include <iostream>
 #include <algorithm>
 using namespace std;

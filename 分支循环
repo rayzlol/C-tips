@@ -1,11 +1,6 @@
 for循环按照次数执行代码
 while按某种条件执行
-while(表达式){
-    语句组
-}
-while(true){
-    break;
-}
+//do while比较少见
 do{
     语句组
 } while(表达式);

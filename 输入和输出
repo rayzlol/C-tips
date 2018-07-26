@@ -61,7 +61,21 @@ cin.get()   we are g|ood friends
 cin.getline() we are go|od friends
 缓冲区指针停下的位置不一样，输出一样
 cin.getline()的方式更符合自算计思维方式，更常用的输入方式，因为大部分时候终止字符设置成换行，cin.getline()自动换到下一行
-
+#include <iostream>
+using namespace std;
+int main()
+{
+    char a[10][10];
+    int n=0;
+    cin>>n;
+    for(int i=0;i<n;++i)
+        cin.getline(a[i], 10);
+    for(int i=0;i<n;++i)
+        cout<<a[i]<<endl;
+}
+只会读入n-1行字符串
+cin读走缓冲区数据，但是留下了回车符，getline（）会先读回车符
+cin后面增加一条cin.get()读走多余的换行符
 
 
 
